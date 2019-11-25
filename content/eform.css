@@ -1,0 +1,30 @@
+body header{
+  border-width: thin;
+  border-color: blue;
+  align-items: center;
+}
+
+body head a{
+  border-width: thin;
+  border-color: blue;
+  background-color: gray;
+  text-align: center;
+  margin: 20px;
+}
+
+body .scrol{
+  border-width: thin;
+  border-color: blue;
+  align-items: center;
+}
+
+body .scrol a{
+  border-width: thin;
+  border-color: blue;
+  background-color: gray;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
