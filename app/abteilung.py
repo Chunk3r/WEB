@@ -18,25 +18,25 @@ class Abteilung_cl(object):
 
    @cherrypy.expose
    #-------------------------------------------------------
-   def a_index(self):
+   def index(self):
    #-------------------------------------------------------
       return self.createList_p()
 
    @cherrypy.expose
    #-------------------------------------------------------
-   def a_add(self):
+   def add(self):
    #-------------------------------------------------------
       return self.createForm_p()
 
    @cherrypy.expose
    #-------------------------------------------------------
-   def a_edit(self, id_spl):
+   def edit(self, id_spl):
    #-------------------------------------------------------
       return self.createForm_p(id_spl)
 
    @cherrypy.expose
    #-------------------------------------------------------
-   def a_save(self, id_spl, bezeichnung_spl, beschreibung_spl, mID_o):
+   def save(self, id_spl, bezeichnung_spl, beschreibung_spl, mID_o):
    #-------------------------------------------------------
       id_s = id_spl
       data_o = {
@@ -53,7 +53,7 @@ class Abteilung_cl(object):
 
    @cherrypy.expose
    #-------------------------------------------------------
-   def a_delete(self, id_spl):
+   def delete(self, id_spl):
    #-------------------------------------------------------
       self.db_o.delete_px(id_spl)
       return self.createList_p()

@@ -1,0 +1,36 @@
+## coding: utf-8
+##--------------------------------------\
+## WEB 2019/2020                        \
+## Aufgabe P2 / Anwendungsrahmen        \
+##--------------------------------------\
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Urlaubsliste / Mitarbeiter</title>
+      <meta charset="UTF-8" />
+      <link rel="stylesheet" href="alist.css" />
+      <script src="/alist.js">
+      </script>
+   </head>
+   <body>
+      <table>
+         <tr>
+            <th>Bezeichnung</th>
+            <th>Beschreibung</th>
+         </tr>
+         % for key_s in data_o:
+         <tr>
+            <td>${data_o[key_s]["bezeichnung"]}</td>
+            <td>${data_o[key_s]["beschreibung"]}</td>
+            <td>
+               <a href="#" data-id="${key_s}" data-action="edit">bearbeiten</a>  /
+               <a href="#" data-id="${key_s}" data-action="delete" >löschen</a>
+            </td>
+         </tr>
+         % endfor
+      </table>
+      <div>
+         <a href="#" data-action="add" data-id="">erfassen</a>
+      </div>
+   </body>
+</html>
