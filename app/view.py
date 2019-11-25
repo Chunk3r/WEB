@@ -40,6 +40,11 @@ class View_cl(object):
             'aform.tpl.html',
             self.createForm_p,
             True # mit id
+         ],
+         'index': [
+            'index.tpl.html',
+            self.createList_p,
+            False # ohne id
          ]
       }
 
@@ -77,5 +82,4 @@ class View_cl(object):
          print(exceptions.text_error_template().render())
          markup_s = exceptions.html_error_template().render()
       return markup_s
-
 # EOF

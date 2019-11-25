@@ -25,7 +25,7 @@ class Application_cl(object):
    #-------------------------------------------------------
    def index(self):
    #-------------------------------------------------------
-      return self.employee.createList_p()
+      return self.createIndex_p()
 
    @cherrypy.expose
    #-------------------------------------------------------
@@ -36,4 +36,10 @@ class Application_cl(object):
       ' ' + \
       str(kwargs)
       raise cherrypy.HTTPError(404, msg_s)
+
+   #-------------------------------------------------------
+   def createIndex_p(self):
+   #-------------------------------------------------------
+      data_o = None
+      return self.view_o.create_px('index', data_o)
 # EOF
