@@ -1,0 +1,42 @@
+## coding: utf-8
+##--------------------------------------\
+## WEB 2019/2020                        \
+## Aufgabe P2 / Anwendungsrahmen        \
+##--------------------------------------\
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Urlaubsliste / Mitarbeiter</title>
+      <meta charset="UTF-8" />
+      <link rel="stylesheet" href="elist.css" />
+      <script src="/elist.js">
+      </script>
+   </head>
+   <body>
+      <table>
+         <tr>
+            <th>Name</th>
+            <th>Vorname</th>
+            <th>Funktion</th>
+            <th>Urlaubstage (Soll)</th>
+            <th>Urlaubstage (Ist)</th>
+         </tr>
+         % for key_s in data_o:
+         <tr>
+            <td>${data_o[key_s]["name"]}</td>
+            <td>${data_o[key_s]["vorname"]}</td>
+            <td>${data_o[key_s]["funktion"]}</td>
+            <td>${data_o[key_s]["urlaubstage"]}</td>
+            <td>${data_o[key_s]["urlaubist"]}</td>
+            <td>
+               <a href="#" data-id="${key_s}" data-action="edit">bearbeiten</a>  /
+               <a href="#" data-id="${key_s}" data-action="delete" >löschen</a>
+            </td>
+         </tr>
+         % endfor
+      </table>
+      <div>
+         <a href="#" data-action="add" data-id="">erfassen</a>
+      </div>
+   </body>
+</html>

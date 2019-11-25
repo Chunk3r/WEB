@@ -1,0 +1,40 @@
+## coding: utf-8
+##--------------------------------------\
+## WEB 2019/2020                        \
+## Aufgabe P2 / Anwendungsrahmen        \
+##--------------------------------------\
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Urlaubsliste / Mitarbeiter</title>
+   <meta charset="UTF-8" />
+   <link rel="stylesheet" href="eform.css" />
+   <script src="/eform.js"></script>
+</head>
+<body>
+   <form id="idForm" action="/employee/save" method="POST">
+      <input type="hidden" value="${key_s}" id="id_spl" name="id_spl" />
+      <div>
+         <label for="vorname_spl">Vorname</label>
+         <input type="text" value="${data_o["vorname"]}" id="vorname_spl" name="vorname_spl" required />
+      </div>
+      <div>
+         <label for="name_spl">Name</label>
+         <input type="text" value="${data_o["name"]}" id="name_spl" name="name_spl" required />
+      </div>
+      <div>
+         <label for="funktion_spl">Funktion</label>
+         <input type="text" value="${data_o["funktion"]}" id="funktion_spl" name="funktion_spl" required />
+      </div>
+      <div>
+         <label for="urlaubstage_ipl">Urlaubstage</label>
+         <input type="number" value="${data_o["urlaubstage"]}" min="${data_o["minurlaub"]}" max="${data_o["maxurlaub"]}" id="urlaubstage_ipl" name="urlaubstage_ipl" required />
+      </div>
+      <div>
+         <a href="#" data-action="save">speichern</a>
+         <a href="#" data-action="reset">zurücksetzen</a>
+         <a href="#" data-action="quit">beenden</a>
+      </div>
+   </form>
+</body>
+</html>

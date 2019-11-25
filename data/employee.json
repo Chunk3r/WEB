@@ -1,0 +1,11 @@
+{
+   "10": {
+      "name": "fff",
+      "vorname": "zzz",
+      "funktion": "Mitarbeiter",
+      "urlaubstage": 27,
+      "minurlaub": 24,
+      "maxurlaub": 30,
+      "urlaubist": 0
+   }
+}
